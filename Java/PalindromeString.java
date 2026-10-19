@@ -1,25 +1,17 @@
+
 public class PalindromeString {
     public static void main(String[] args) {
-        String text = "madam";
-        boolean isPalindrome = true;
+        String str = "madam";
+        String rev = "";
 
-        int left = 0;
-        int right = text.length() - 1;
-
-        while (left < right) {
-            if (text.charAt(left) != text.charAt(right)) {
-                isPalindrome = false;
-                break;
-            }
-
-            left++;
-            right--;
+        for (int i = str.length() - 1; i >= 0; i--) {
+            rev += str.charAt(i);
         }
 
-        if (isPalindrome) {
-            System.out.println(text + " is a palindrome.");
+        if (str.equals(rev)) {
+            System.out.println("Palindrome");
         } else {
-            System.out.println(text + " is not a palindrome.");
+            System.out.println("Not Palindrome");
         }
     }
 }
